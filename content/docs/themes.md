@@ -14,7 +14,7 @@ icon: palette
 
 ```css
 @import "tailwindcss";
-@import "statue-ssg/themes/blue.css";  /* Change this line */
+@import "statue-ssg/themes/blue.css"; /* Change this line */
 
 @source "../";
 @source "../../node_modules/statue-ssg/src/**/*.{svelte,js,ts}";
@@ -29,13 +29,13 @@ Your entire site now uses the new theme.
 Pick one:
 
 ```css
-@import "statue-ssg/themes/blue.css";        /* Navy + blue (default) */
-@import "statue-ssg/themes/red.css";         /* Dark red + red */
-@import "statue-ssg/themes/orange.css";      /* Brown + orange */
-@import "statue-ssg/themes/green.css";       /* Dark green + emerald */
-@import "statue-ssg/themes/purple.css";      /* Dark purple + purple */
-@import "statue-ssg/themes/cyan.css";        /* Dark cyan + cyan */
-@import "statue-ssg/themes/pink.css";        /* Dark pink + pink */
+@import "statue-ssg/themes/blue.css"; /* Navy + blue (default) */
+@import "statue-ssg/themes/red.css"; /* Dark red + red */
+@import "statue-ssg/themes/orange.css"; /* Brown + orange */
+@import "statue-ssg/themes/green.css"; /* Dark green + emerald */
+@import "statue-ssg/themes/purple.css"; /* Dark purple + purple */
+@import "statue-ssg/themes/cyan.css"; /* Dark cyan + cyan */
+@import "statue-ssg/themes/pink.css"; /* Dark pink + pink */
 @import "statue-ssg/themes/black-white.css"; /* Monochrome */
 ```
 
@@ -78,7 +78,7 @@ Pick one:
 
 ```css
 @import "tailwindcss";
-@import "./themes/my-theme.css";  /* Your custom theme */
+@import "./themes/my-theme.css"; /* Your custom theme */
 
 @source "../";
 @source "../../node_modules/statue-ssg/src/**/*.{svelte,js,ts}";
@@ -98,21 +98,21 @@ Visit your pages to check the colors.
 
 **Your theme must define these CSS variables:**
 
-| Variable | Used For |
-|----------|----------|
-| `--color-background` | Main page background |
-| `--color-card` | Card/section backgrounds |
-| `--color-border` | Borders and dividers |
-| `--color-foreground` | Main text color |
-| `--color-muted` | Secondary text |
-| `--color-primary` | Buttons, links |
-| `--color-secondary` | Secondary buttons |
-| `--color-accent` | Highlights |
-| `--color-on-primary` | Text on primary color |
-| `--color-on-background` | High contrast text |
-| `--color-hero-from` | Hero gradient start |
-| `--color-hero-via` | Hero gradient middle |
-| `--color-hero-to` | Hero gradient end |
+| Variable                | Used For                 |
+| ----------------------- | ------------------------ |
+| `--color-background`    | Main page background     |
+| `--color-card`          | Card/section backgrounds |
+| `--color-border`        | Borders and dividers     |
+| `--color-foreground`    | Main text color          |
+| `--color-muted`         | Secondary text           |
+| `--color-primary`       | Buttons, links           |
+| `--color-secondary`     | Secondary buttons        |
+| `--color-accent`        | Highlights               |
+| `--color-on-primary`    | Text on primary color    |
+| `--color-on-background` | High contrast text       |
+| `--color-hero-from`     | Hero gradient start      |
+| `--color-hero-via`      | Hero gradient middle     |
+| `--color-hero-to`       | Hero gradient end        |
 
 **Why:** Statue components use these variables for styling. Missing variables = broken styling.
 
@@ -170,6 +170,7 @@ Use theme variables in Tailwind's arbitrary values:
 ```
 
 **Then use them:**
+
 ```svelte
 <div class="glass-card">Glass effect card</div>
 ```
@@ -187,6 +188,7 @@ Use theme variables in Tailwind's arbitrary values:
 ### Theme works in dev but not build
 
 Run `npm run build` to test. If it fails, check:
+
 - Theme file syntax is valid
 - Import path is correct
 - No console errors
@@ -204,6 +206,7 @@ This requires custom JavaScript. See [Tailwind dark mode docs](https://tailwindc
 - **[Get Started](./get-started.md)** - Build your site
 
 **Resources:**
+
 - **[Statue.dev](https://statue.dev)** - Official documentation
 - [CSS Custom Properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)

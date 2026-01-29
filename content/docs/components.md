@@ -41,6 +41,7 @@ Top navigation with logo, links, and mobile menu.
 ```
 
 **Props:**
+
 - `navbarItems` (array) - Navigation links
   - `name` (string) - Unique identifier
   - `title` (string) - Display text
@@ -83,6 +84,7 @@ Display content directories as cards.
 ```
 
 **Props:**
+
 - `directories` (array) - Directory list
   - `title` (string) - Display name
   - `url` (string) - Directory URL
@@ -114,6 +116,7 @@ Shows recent content as cards.
 ```
 
 **Props:**
+
 - `rootContent` (array) - Content items
   - `url` (string) - Content URL
   - `metadata` (object)
@@ -144,6 +147,7 @@ Site footer with sitemap and social links.
 ```
 
 **Props (all optional):**
+
 - `directories` (array) - Site directories for sitemap
 - `currentPath` (string) - Current page path
 - `copyrightText` (string) - Copyright notice
@@ -170,6 +174,7 @@ Page title section for internal pages.
 ```
 
 **Props:**
+
 - `title` (string, required) - Page title
 - `description` (string, optional) - Subtitle
 
@@ -194,6 +199,7 @@ Title and metadata for content pages.
 ```
 
 **Props:**
+
 - `title` (string, required) - Page title
 - `date` (string, optional) - Publication date
 - `author` (string, optional) - Author name
@@ -217,6 +223,7 @@ Renders HTML content from markdown.
 ```
 
 **Props:**
+
 - `content` (string, required) - HTML string to render
 
 ---
@@ -236,6 +243,7 @@ Header for directory listing pages.
 ```
 
 **Props:**
+
 - `title` (string, required) - Directory name
 
 ---
@@ -257,6 +265,7 @@ Grid of subdirectory cards.
 ```
 
 **Props:**
+
 - `subDirectories` (array) - Subdirectory list
   - `title` (string) - Display name
   - `url` (string) - Subdirectory URL
@@ -283,6 +292,7 @@ Content cards for directory pages.
 ```
 
 **Props:**
+
 - `content` (array) - Content items
 - `showDirectory` (boolean, optional) - Show directory badges
 - `emptyMessage` (string, optional) - Message when no content
@@ -310,6 +320,7 @@ Info/warning/error callout box.
 ```
 
 **Props:**
+
 - `warning` (object)
   - `type` (string) - `'info'`, `'warning'`, `'error'`, or `'success'`
   - `title` (string, optional) - Heading
@@ -353,6 +364,7 @@ Call-to-action section with buttons.
 ```
 
 **Props:**
+
 - `title` (string) - CTA heading
 - `description` (string) - CTA text
 - `primaryButtonText` (string) - Primary button label
@@ -397,6 +409,7 @@ Team members grid.
 ```
 
 **Props:**
+
 - `teamMembers` (array)
   - `name` (string) - Person's name
   - `role` (string) - Job title
@@ -421,6 +434,7 @@ Features/benefits grid.
 ```
 
 **Props:**
+
 - `features` (array)
   - `title` (string) - Feature name
   - `description` (string) - Feature description
@@ -442,6 +456,7 @@ Features/benefits grid.
 ```
 
 **Props (all optional):**
+
 - `builtByText`, `builtByLinkText`, `builtByLinkUrl`
 - `builtInText`, `builtInLinkText`, `builtInLinkUrl`
 - `builtForText`, `communityLinkText`, `communityLinkUrl`
@@ -472,6 +487,7 @@ Recursive tree view for nested data.
 ```
 
 **Props:**
+
 - `items` (array) - Tree structure
   - `id` (string) - Unique identifier
   - `label` (string) - Display text
@@ -596,4 +612,5 @@ For complete component documentation with all props and examples:
 - **[Site Config](./site-config.md)** - Configure component data sources
 
 **Resources:**
+
 - **[Statue.dev](https://statue.dev)** - Official documentation

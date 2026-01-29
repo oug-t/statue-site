@@ -15,7 +15,16 @@
 <div
 	class="min-h-screen bg-linear-to-b from-(--color-hero-from) via-(--color-hero-via) to-(--color-hero-to)"
 >
-	<Hero />
+<div class="playground-info">
+	<h2>PlayGround Demo
+        <br/>implemented in 1 hour
+    </h2>
+	<p class="details">
+		Currently running native <strong>JavaScript</strong>. <br />
+		Multi-language support (Python/Ruby) requires
+        <strong>WebAssembly</strong> installation. try out below: 
+	</p>
+</div>
 
 	<div class="playground-cta">
 		<a href="/playground" class="playground-button">
@@ -97,4 +106,53 @@
 		font-size: 0.9rem;
 		margin: 0;
 	}
+
+    .playground-info {
+        text-align: center;
+        max-width: 900px; 
+        margin: 5rem auto 2rem; 
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+    }
+
+    .playground-info h2 {
+        font-size: 3.5rem; 
+        font-weight: 800;
+        margin: 1rem 0;
+        line-height: 1.1;
+        color: var(--color-heading, #111);
+        letter-spacing: -0.02em;
+        color: #cc0000;
+    }
+
+    .playground-info .headline {
+        font-size: 1.5rem;
+        color: var(--color-text, #333);
+        margin-bottom: 1rem;
+        max-width: 700px;
+        color: #222;
+    }
+
+    .playground-info .details {
+        font-size: 1.1rem;
+        color: var(--color-text-muted, #666);
+        line-height: 1.6;
+        max-width: 650px;
+    }
+
+    .badge {
+        background: rgba(0, 0, 0, 0.05);
+        color: #555;
+        padding: 6px 16px;
+        border-radius: 99px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block;
+    }
 </style>

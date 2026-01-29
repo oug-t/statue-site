@@ -52,4 +52,4 @@ function hello() {
 
 ---
 
-Statue SSG makes content creation very easy! 
+Statue SSG makes content creation very easy!

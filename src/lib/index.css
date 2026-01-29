@@ -6,4 +6,6 @@
 @source "../";
 @source "../../node_modules/statue-ssg/src/**/*.{svelte,js,ts}";
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+}

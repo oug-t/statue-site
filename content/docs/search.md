@@ -19,8 +19,8 @@ export const siteConfig = {
   // ... other config
 
   search: {
-    enabled: true
-  }
+    enabled: true,
+  },
 };
 ```
 
@@ -96,20 +96,20 @@ export const siteConfig = {
     enabled: true,
 
     // UI options
-    placeholder: 'Search...',
-    noResultsText: 'No results found',
+    placeholder: "Search...",
+    noResultsText: "No results found",
 
     // Search behavior
-    debounceMs: 300,        // Delay before search executes (ms)
-    minQueryLength: 2,      // Minimum characters to trigger search
-    maxResults: 10,         // Maximum results to display
+    debounceMs: 300, // Delay before search executes (ms)
+    minQueryLength: 2, // Minimum characters to trigger search
+    maxResults: 10, // Maximum results to display
 
     // Result display
-    showCategories: true,   // Show category badges
-    showDates: true,        // Show dates in results
-    showExcerpts: true,     // Show content excerpts
-    excerptLength: 30       // Words in excerpt
-  }
+    showCategories: true, // Show category badges
+    showDates: true, // Show dates in results
+    showExcerpts: true, // Show content excerpts
+    excerptLength: 30, // Words in excerpt
+  },
 };
 ```
 
@@ -134,18 +134,18 @@ Customize the Search component with props:
 
 #### Available Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `placeholder` | `string` | `'Search...'` | Input placeholder text |
-| `debounceMs` | `number` | `300` | Search delay in milliseconds |
-| `minQueryLength` | `number` | `2` | Minimum query length to trigger search |
-| `maxResults` | `number` | `10` | Maximum results to display |
-| `showCategories` | `boolean` | `true` | Show category badges in results |
-| `showDates` | `boolean` | `true` | Show dates in results |
-| `showExcerpts` | `boolean` | `true` | Show content excerpts in results |
-| `containerClass` | `string` | `''` | Additional container CSS classes |
-| `inputClass` | `string` | `''` | Additional input CSS classes |
-| `resultsClass` | `string` | `''` | Additional results dropdown CSS classes |
+| Prop             | Type      | Default       | Description                             |
+| ---------------- | --------- | ------------- | --------------------------------------- |
+| `placeholder`    | `string`  | `'Search...'` | Input placeholder text                  |
+| `debounceMs`     | `number`  | `300`         | Search delay in milliseconds            |
+| `minQueryLength` | `number`  | `2`           | Minimum query length to trigger search  |
+| `maxResults`     | `number`  | `10`          | Maximum results to display              |
+| `showCategories` | `boolean` | `true`        | Show category badges in results         |
+| `showDates`      | `boolean` | `true`        | Show dates in results                   |
+| `showExcerpts`   | `boolean` | `true`        | Show content excerpts in results        |
+| `containerClass` | `string`  | `''`          | Additional container CSS classes        |
+| `inputClass`     | `string`  | `''`          | Additional input CSS classes            |
+| `resultsClass`   | `string`  | `''`          | Additional results dropdown CSS classes |
 
 ## Usage Tips
 
@@ -163,14 +163,10 @@ To exclude specific content from being indexed, add the `no-search` class or use
 
 ```html
 <!-- Exclude entire section -->
-<div class="no-search">
-  This content won't be indexed by search
-</div>
+<div class="no-search">This content won't be indexed by search</div>
 
 <!-- Or use Pagefind's data attribute -->
-<div data-pagefind-ignore>
-  This also won't be indexed
-</div>
+<div data-pagefind-ignore>This also won't be indexed</div>
 ```
 
 You can configure excluded selectors in `pagefind.config.js` (optional):
@@ -178,20 +174,15 @@ You can configure excluded selectors in `pagefind.config.js` (optional):
 ```js
 // pagefind.config.js
 export default {
-  site: 'build',
-  exclude_selectors: [
-    'header',
-    'footer',
-    'nav',
-    '.no-search',
-    '#comments'
-  ]
+  site: "build",
+  exclude_selectors: ["header", "footer", "nav", ".no-search", "#comments"],
 };
 ```
 
 ### Customizing Search Results
 
 Search automatically indexes:
+
 - Page titles
 - Content text
 - Meta descriptions
@@ -277,6 +268,7 @@ In development mode (`npm run dev`), the search index doesn't exist yet.
 ### "Failed to load Pagefind" error
 
 This error occurs if:
+
 1. You haven't run `npm run build` yet
 2. The `pagefind` directory is missing from your build output
 3. Pagefind wasn't installed: `npm install -D pagefind`
@@ -284,12 +276,14 @@ This error occurs if:
 ### Search results not updating
 
 After adding new content:
+
 1. Rebuild your site: `npm run build`
 2. The search index regenerates automatically
 
 ### No results for certain pages
 
 Check that:
+
 1. Pages are being built (check `build/` directory)
 2. Content isn't in excluded sections (header, footer, nav)
 3. Pages have actual text content to index
@@ -302,18 +296,13 @@ Create `pagefind.config.js` in your project root:
 
 ```js
 export default {
-  site: 'build',
-  output_path: 'pagefind',
-  bundle_dir: '_pagefind',
-  glob: '**/*.{html}',
-  exclude_selectors: [
-    'header',
-    'footer',
-    'nav',
-    '.no-search'
-  ],
-  force_language: 'en',
-  verbose: false
+  site: "build",
+  output_path: "pagefind",
+  bundle_dir: "_pagefind",
+  glob: "**/*.{html}",
+  exclude_selectors: ["header", "footer", "nav", ".no-search"],
+  force_language: "en",
+  verbose: false,
 };
 ```
 
@@ -323,8 +312,8 @@ Pagefind supports multiple languages. Set in `pagefind.config.js`:
 
 ```js
 export default {
-  site: 'build',
-  force_language: 'en', // or 'es', 'fr', 'de', etc.
+  site: "build",
+  force_language: "en", // or 'es', 'fr', 'de', etc.
 };
 ```
 

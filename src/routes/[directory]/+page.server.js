@@ -1,4 +1,9 @@
-import { getContentDirectories, getContentByDirectory, getSubDirectories, getSidebarTree } from 'statue-ssg/cms/content-processor';
+import {
+  getContentDirectories,
+  getContentByDirectory,
+  getSubDirectories,
+  getSidebarTree,
+} from "statue-ssg/cms/content-processor";
 
 // Make this page prerendered as a static page
 export const prerender = true;
@@ -18,19 +23,22 @@ export function load({ params }) {
   const subDirectories = getSubDirectories(directoryName);
 
   // Get directory information
-  const currentDirectory = directories.find(dir => dir.name === directoryName) || {
+  const currentDirectory = directories.find(
+    (dir) => dir.name === directoryName,
+  ) || {
     name: directoryName,
-    title: directoryName.charAt(0).toUpperCase() + directoryName.slice(1)
+    title: directoryName.charAt(0).toUpperCase() + directoryName.slice(1),
   };
 
   // Get sidebar tree for docs directory
-  const sidebarItems = directoryName === 'docs' ? getSidebarTree(directoryName) : [];
+  const sidebarItems =
+    directoryName === "docs" ? getSidebarTree(directoryName) : [];
 
   return {
     directories,
     directoryContent,
     subDirectories,
     currentDirectory,
-    sidebarItems
+    sidebarItems,
   };
 }
