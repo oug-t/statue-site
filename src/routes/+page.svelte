@@ -20,18 +20,17 @@
         <br/>implemented in 1 hour
     </h2>
 	<p class="details">
-		Currently running native <strong>JavaScript</strong>. <br />
-		Multi-language support (Python/Ruby) requires
-        <strong>WebAssembly</strong> installation. try out below: 
+		Currently in beta version. <br />
+        <strong>TRY IT BELOW:</strong>
 	</p>
 </div>
 
 	<div class="playground-cta">
 		<a href="/playground" class="playground-button">
 			<span class="icon">▶</span>
-			Try the JS Playground
+			Try the Statue Playground
 		</a>
-		<p class="cta-text">Run code directly in your browser</p>
+		<p class="cta-text">Run code in your browser</p>
 	</div>
 
 
